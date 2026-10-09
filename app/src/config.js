@@ -140,14 +140,14 @@ module.exports = {
     // ==========================================
     webrtc: {
         stun: {
-            enabled: getEnvBoolean(process.env.STUN_SERVER_ENABLED),
-            url: process.env.STUN_SERVER_URL,
+            enabled: true,
+            url: 'stun:openrelay.metered.ca:80',
         },
         turn: {
-            enabled: getEnvBoolean(process.env.TURN_SERVER_ENABLED),
-            url: process.env.TURN_SERVER_URL,
-            username: process.env.TURN_SERVER_USERNAME,
-            credential: process.env.TURN_SERVER_CREDENTIAL,
+            enabled: true,
+            url: 'turn:openrelay.metered.ca:443?transport=tcp',
+            username: 'openrelayproject',
+            credential: 'openrelayproject',
         },
     },
 
